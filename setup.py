@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-microblog',
-    version='0.1.1',
+    version='0.1.0',
     description='Simple blogging application for Django',
     short_description='Simple blogging application for Django',
     long_description=open('README.md').read(),
