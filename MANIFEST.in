@@ -1,0 +1,2 @@
+recursive-include microblog/fixtures *
+recursive-include microblog/migrations *

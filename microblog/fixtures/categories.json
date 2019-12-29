@@ -1,0 +1,11 @@
+[
+    {
+        "pk": 1,
+        "model": "microblog.Category",
+        "fields": {
+            "title": "Sample Category",
+            "created": "2019-12-31 00:00:00+00",
+            "modified": "2019-12-31 00:00:00+00"
+        }
+    }
+]
