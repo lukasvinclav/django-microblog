@@ -4,7 +4,6 @@ from django.utils.translation import ugettext_lazy as _
 from .managers import CategoryManager, PostManager
 
 
-
 class Category(models.Model):
     title = models.CharField(_('title'), max_length=255)
     created = models.DateTimeField(_('created'), auto_now_add=True)
