@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "django-microblog"
+version = "0.1.0"
+description = "Simple blogging application for Django"
+license = "MIT"
+readme = "README.md"
+authors = []
+homepage = "https://github.com/lukasvinclav/django-microblog"
+repository = "https://github.com/lukasvinclav/django-microblog"
+packages = [
+  { include = "microblog" },
+]
+keywords = [
+  "django",
+  "blog",
+  "post",
+  "category",
+]
+classifiers = [
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Operating System :: OS Independent",
+        "Environment :: Web Environment",
+        "Intended Audience :: Developers",
+        "Framework :: Django",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+django = "^3.0"
+pillow = "^7.0"
+
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"
