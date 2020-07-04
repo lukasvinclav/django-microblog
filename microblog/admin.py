@@ -19,8 +19,9 @@ class PostFormAdmin(forms.ModelForm):
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     form = PostFormAdmin
-    list_display = ['title', 'slug', 'category', 'is_visible', 'created']
+    list_display = ['title', 'slug', 'category', 'is_visible', 'weight', 'created']
     list_filter = ['is_visible', 'category']
+    list_editable = ['weight']
 
 
 @admin.register(Category)

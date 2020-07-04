@@ -21,7 +21,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     category = models.ForeignKey(
-        Category, verbose_name=_('Category'), null=True, default=None, blank=True, on_delete=models.SET_NULL
+        Category, verbose_name=_('category'), null=True, default=None, blank=True, on_delete=models.SET_NULL
     )
     title = models.CharField(_('title'), max_length=255)
     slug = models.SlugField(_('slug'), max_length=255, unique=True)
@@ -29,6 +29,7 @@ class Post(models.Model):
     excerpt = models.TextField(_('excerpt'), blank=True)
     content = models.TextField(_('content'), blank=True)
     is_visible = models.BooleanField(_('visible'), default=False)
+    weight = models.IntegerField(_('weight'), default=None, blank=True, null=True)
     created = models.DateTimeField(_('created'), auto_now_add=True)
     modified = models.DateTimeField(_('modified'), auto_now=True)
     objects = PostManager()
@@ -36,7 +37,7 @@ class Post(models.Model):
     class Meta:
         verbose_name = _('post')
         verbose_name_plural = _('posts')
-        ordering = ['-created']
+        ordering = ['-weight', '-created']
 
     def __str__(self):
         return self.title
