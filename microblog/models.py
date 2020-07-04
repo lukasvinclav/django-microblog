@@ -29,7 +29,7 @@ class Post(models.Model):
     excerpt = models.TextField(_('excerpt'), blank=True)
     content = models.TextField(_('content'), blank=True)
     is_visible = models.BooleanField(_('visible'), default=False)
-    weight = models.IntegerField(_('weight'), default=None, blank=True, null=True)
+    weight = models.IntegerField(_('weight'), default=0, blank=True, null=True)
     created = models.DateTimeField(_('created'), auto_now_add=True)
     modified = models.DateTimeField(_('modified'), auto_now=True)
     objects = PostManager()
